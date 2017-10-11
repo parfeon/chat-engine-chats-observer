@@ -48,5 +48,8 @@
     },
     "peerDependencies": {
         "chat-engine": ">=0.6.0"
+    },
+    "dependencies": {
+        "chat-engine": "^0.6.0"
     }
 }

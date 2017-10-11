@@ -10,9 +10,7 @@ import shell from 'gulp-shell';
 const serverJSFilePath = `${process.cwd()}/node_modules/chat-engine/server.js`;
 gulp.task('patch_server', shell.task([
     `cp ${serverJSFilePath} ${serverJSFilePath}.bak`,
-    `sed -i "" "s/publishKey:[ ]'[a-zA-Z0-9-]*'/publishKey: process.env.PUBLISH_KEY/g" ${serverJSFilePath}`,
-    `sed -i "" "s/subscribeKey:[ ]'[a-zA-Z0-9-]*'/subscribeKey: process.env.SUBSCRIBE_KEY/g" ${serverJSFilePath}`,
-    `sed -i "" "s/secretKey:[ ]'[a-zA-Z0-9-]*'/secretKey: process.env.SECRET_KEY/g" ${serverJSFilePath}`,
+    'node test/pre-flight/patch-server.js'
 ]));
 gulp.task('restore_server', shell.task([`mv ${serverJSFilePath}.bak ${serverJSFilePath}`]));
 

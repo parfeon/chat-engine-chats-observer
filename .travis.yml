@@ -3,7 +3,6 @@ sudo: false
 node_js:
   - '6'
   - '7'
-  - '8'
 cache: yarn
 script:
   - npm install chat-engine && cd ./node_modules/chat-engine && npm install express && npm link express && cd ../..

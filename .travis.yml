@@ -6,8 +6,9 @@ node_js:
   - '8'
 cache: yarn
 script:
+  - npm install
   - gulp patch_server
-  - node node_modules/chat-engine/server.js &
+  - node ./node_modules/chat-engine/server.js &
   - gulp test
   - gulp restore_server
 after_success:

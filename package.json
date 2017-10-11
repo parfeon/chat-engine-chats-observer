@@ -1,0 +1,52 @@
+{
+    "name": "chat-engine-chats-observer",
+    "version": "1.0.0",
+    "description": "Observer make it easier to discover changes in user's chats list by triggering '$.chats.change' event with Chat.",
+    "main": "src/plugin.js",
+    "scripts": {
+        "test": "gulp test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/parfeon/chat-engine-chats-observer.git"
+    },
+    "keywords": [
+        "pubnub",
+        "chat",
+        "sdk",
+        "realtime"
+    ],
+    "author": "Serhii Mamontov <parfeon@me.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/parfeon/chat-engine-chats-observer/issues"
+    },
+    "homepage": "https://github.com/parfeon/chat-engine-chats-observer#readme",
+    "devDependencies": {
+        "babel-plugin-add-module-exports": "^0.2.1",
+        "babel-plugin-istanbul": "^4.1.5",
+        "babel-plugin-transform-builtin-extend": "^1.1.2",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-es2015-no-commonjs": "0.0.2",
+        "chai": "^4.1.2",
+        "eslint": "^4.8.0",
+        "eslint-config-airbnb": "^16.0.0",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-jsx-a11y": "^6.0.2",
+        "eslint-plugin-react": "^7.4.0",
+        "eventemitter2": "^4.1.2",
+        "gulp": "^3.9.1",
+        "gulp-spawn-mocha": "^4.0.1",
+        "gulp-eslint": "^4.0.0",
+        "gulp-istanbul": "^1.1.2",
+        "gulp-shell": "^0.6.3",
+        "isparta": "^4.0.0",
+        "mocha": "^4.0.1",
+        "run-sequence": "^2.2.0",
+        "sinon": "^4.0.1",
+        "sinon-chai": "^2.14.0"
+    },
+    "peerDependencies": {
+        "chat-engine": ">=0.6.0"
+    }
+}

@@ -7,7 +7,7 @@ node_js:
 cache: yarn
 script:
   - gulp patch_server
-  - node server.js &
+  - node node_modules/chat-engine/server.js &
   - gulp test
   - gulp restore_server
 after_success:

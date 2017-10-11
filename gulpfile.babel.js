@@ -7,7 +7,7 @@ import istanbul from 'gulp-istanbul';
 import shell from 'gulp-shell';
 
 // Replace hardcoded keys with environment based values 'process.env[KEY_NAME]'.
-const serverJSFilePath = './node_modules/chat-engine/server.js';
+const serverJSFilePath = `${process.cwd()}/node_modules/chat-engine/server.js`;
 gulp.task('patch_server', shell.task([
     `cp ${serverJSFilePath} ${serverJSFilePath}.bak`,
     `sed -i "" "s/publishKey:[ ]'[a-zA-Z0-9-]*'/publishKey: process.env.PUBLISH_KEY/g" ${serverJSFilePath}`,

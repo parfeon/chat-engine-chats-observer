@@ -7,7 +7,7 @@ node_js:
 cache: yarn
 script:
   - npm install chat-engine
-  - npm install --prefix ./node_modules/chat-engine express
+  - npm install -g express
   - npm install
   - gulp patch_server
   - node ./node_modules/chat-engine/server.js &
